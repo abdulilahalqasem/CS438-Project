@@ -1,8 +1,9 @@
 const dragon = document.getElementById("Dragon");
 const knight = document.getElementById("Knight");
 var counter = 0;
-var lives = 3;
+var score = 0;
 function jump() {
+  score = document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100)
   if (dragon.classList != "jump") {
     dragon.classList.add("jump");
 
@@ -19,18 +20,32 @@ let isAlive = setInterval(function () {
   // get current knight X position
   let knightLeft = parseInt(window.getComputedStyle(knight).getPropertyValue("left"));
 
+  
+  
   // detect collision
   if (knightLeft < 65 && knightLeft > 0 && dragonTop >= 450) {
+
+    a = Math.floor(counter/100);
     // collision
-    lives -= 1;
-    if(lives == 0) {
-      alert("Game Over! Score: "+Math.floor(counter/100));
-      counter =0;
+    
+    alert("Game Over! Score: "+Math.floor(counter/100));
+    
+    if(score >  a)
+      document.getElementById("highSpan").innerHTML = Math.floor(counter/100);
+    else {
+      document.getElementById("highSpan").innerHTML = Math.floor(score);
     }
+    counter =0;
+    document.addEventListener("keydown", function(event) {
+      jump();
+        
+    });
+      
       
   }else{
     counter++;
-    document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
+    score = document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
+    
   } 
 
 }, 10);

@@ -18,14 +18,14 @@
   }
   
   .jump {
-    animation: jump 0.5s linear;
+    animation: jump 0.7s linear;
   }
   #scoreSpan {
     position: absolute;
     font-size: 50px;
     color: white;
     right: 20vmin;
-    top: 6vmin;
+    top: 6.5vmin;
   }
   #score {
     position: absolute;
@@ -33,6 +33,21 @@
     color: white;
     right: 25vmin;
     top: 1vmin;
+  }
+  #highScore {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    left: 20vmin;
+    top: 1vmin;
+  }
+  
+  #highSpan {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    left: 28vmin;
+    top: 6vmin;
   }
   
   @keyframes jump {
