@@ -1,0 +1,96 @@
+.game {
+    width: 1800px;
+    height: 600px;
+    background-image: url("lava.gif");
+    background-size: 1800px 600px;
+    box-shadow: 0px 3px 0px 0px black;
+    border-radius: 5px;
+    margin: auto;
+  }
+  
+  #Dragon {
+    width: 150px;
+    height: 150px;
+    background-image: url("Dragon-unscreen.gif");
+    background-size: 150px 150px;
+    position: relative;
+    top: 450px;
+  }
+  
+  .jump {
+    animation: jump 0.7s linear;
+  }
+  #scoreSpan {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    right: 20vmin;
+    top: 6vmin;
+  }
+  #score {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    right: 25vmin;
+    top: 1vmin;
+  }
+  #highScore {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    left: 20vmin;
+    top: 1vmin;
+  }
+  
+  #highSpan {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    left: 28vmin;
+    top: 6vmin;
+  }
+  
+  @keyframes jump {
+    0% {
+      top: 460px;
+    }
+  
+    30% {
+      top: 430px;
+    }
+  
+    50% {
+      top: 235px;
+    }
+  
+    80% {
+      top: 430px;
+    }
+  
+    100% {
+      top: 460px;
+    }
+  }
+  
+  #Knight {
+    width: 240px;
+    height: 120px;
+    position: relative;
+    top: 330px;
+    left: 1600px;
+  
+    background-image: url("Knight3-unscreen.gif");
+    background-size: 240px 120px;
+  
+    animation: block 2s infinite linear;
+  }
+  
+  @keyframes block {
+    0% {
+      left: 1600px;
+    }
+  
+    100% {
+      left: -20px;
+    }
+  }
