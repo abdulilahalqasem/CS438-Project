@@ -1,96 +1,167 @@
 .game {
-    width: 1800px;
-    height: 600px;
-    background-image: url("lava.gif");
-    background-size: 1800px 600px;
-    box-shadow: 0px 3px 0px 0px black;
-    border-radius: 5px;
-    margin: auto;
+  width: 1800px;
+  height: 600px;
+  background-image: url("lava.gif");
+  background-size: 1800px 600px;
+  box-shadow: 0px 3px 0px 0px black;
+  top:0;
+  left:0;
+  background-position:0px 0px;
+  border-radius: 5px;
+  margin: auto;
+  animation: animatedBackground 100s linear infinite;
+}
+
+#lavaland {
+  width: 1800px;
+  height: 200px;
+  background-image: url("lavaland.png");
+  background-repeat: repeat;
+  left: 60px;
+  top: 560px;
+  background-position: 60px 560px;
+  background-size: 1800px 200px;
+  position: absolute;
+  animation: animatedBackground 50s linear infinite;
+
+}
+
+#Dragon {
+  width: 150px;
+  height: 150px;
+  background-image: url("Dragon-unscreen.gif");
+  background-size: 150px 150px;
+  position: relative;
+  top: 450px;
+}
+
+.jump {
+  animation: jump 0.5s linear;
+}
+
+#scoreSpan {
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  right: 180px;
+  top: 60px;
+}
+
+#score {
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  right: 25vmin;
+  top: 1vmin;
+}
+
+#highScore {
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  left: 20vmin;
+  top: 1vmin;
+}
+
+#highSpan {
+  position: absolute;
+  font-size: 50px;
+  color: white;
+  left: 280px;
+  top: 60px;
+}
+
+#Knight1 {
+  width: 240px;
+  height: 120px;
+  position: relative;
+  top: 330px;
+  left: 1600px;
+  background-image: url("Knight3-unscreen.gif");
+  background-size: 240px 120px;
+  animation: knight 2s infinite linear;
+}
+
+#Knight2 {
+
+  width: 240px;
+  height: 120px;
+  position: fixed;
+  top: 490px;
+  left: 1600px;
+  background-image: url("Knight3-unscreen.gif");
+  background-size: 240px 120px;
+  animation: knight 3s linear 1s infinite;
+}
+
+@keyframes jump {
+  0% {
+    top: 460px;
   }
-  
-  #Dragon {
-    width: 150px;
-    height: 150px;
-    background-image: url("Dragon-unscreen.gif");
-    background-size: 150px 150px;
-    position: relative;
-    top: 450px;
+  10% {
+    top: 430px;
   }
-  
-  .jump {
-    animation: jump 0.7s linear;
+  20% {
+    top: 390px;
   }
-  #scoreSpan {
-    position: absolute;
-    font-size: 50px;
-    color: white;
-    right: 20vmin;
-    top: 6vmin;
+
+  30% {
+    top: 360px;
   }
-  #score {
-    position: absolute;
-    font-size: 50px;
-    color: white;
-    right: 25vmin;
-    top: 1vmin;
+  40% {
+    top: 300px;
   }
-  #highScore {
-    position: absolute;
-    font-size: 50px;
-    color: white;
-    left: 20vmin;
-    top: 1vmin;
+
+  50% {
+    top: 235px;
   }
-  
-  #highSpan {
-    position: absolute;
-    font-size: 50px;
-    color: white;
-    left: 28vmin;
-    top: 6vmin;
+  60% {
+    top: 300px;
   }
-  
-  @keyframes jump {
-    0% {
-      top: 460px;
-    }
-  
-    30% {
-      top: 430px;
-    }
-  
-    50% {
-      top: 235px;
-    }
-  
-    80% {
-      top: 430px;
-    }
-  
-    100% {
-      top: 460px;
-    }
+
+  70% {
+    top: 360px;
   }
-  
-  #Knight {
-    width: 240px;
-    height: 120px;
-    position: relative;
-    top: 330px;
+
+  80% {
+    top: 390px;
+  }
+
+  90% {
+    top: 430px;
+  }
+
+  100% {
+    top: 460px;
+  }
+}
+
+@keyframes knight {
+  0% {
     left: 1600px;
-  
-    background-image: url("Knight3-unscreen.gif");
-    background-size: 240px 120px;
-  
-    animation: block 2s infinite linear;
+  }
+
+  100% {
+    left: 50px;
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 1800px 600px;
+  }
+
+  to {
+    background-position: -10000px 600px;
+  }
+}
+
+@keyframes land {
+  from {
+    background-position: 60px 560px;
   }
   
-  @keyframes block {
-    0% {
-      left: 1600px;
-    }
-  
-    100% {
-      left: -20px;
-    }
+  to {
+    background-position: -10000px 560px;
   }
+}
