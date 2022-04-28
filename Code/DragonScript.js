@@ -32,9 +32,6 @@ let isAlive = setInterval(function () {
     // collision
     score = Math.floor(counter/100)
 
-    //alert("Game Over! Score: " + score);
-    //window.open("leaderboard.php");
-
     if (!confirm("Press \"OK\" to play again, OR \"Cancel\" if you want to see the LeaderBoard.")) {
         window.open("leaderboard.php");
       } 
@@ -49,14 +46,10 @@ let isAlive = setInterval(function () {
     //set highscore to score, if score > highscore
     if(document.getElementById("highSpan").innerHTML <  score){
       document.getElementById("highSpan").innerHTML = score;
-      
-      /* xhttp.open("POST", "game.php", true);
-      var ourFormData = new FormData();
-      ourFormData.append("score", score);
-      xhttp.send(ourFormData); */
     }
 
     counter =0;
+    
     document.addEventListener("keydown", function(event) {
       jump();  
     });

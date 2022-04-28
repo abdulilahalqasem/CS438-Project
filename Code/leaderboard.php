@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>The Game LeaderBoard</title>
+        <title>The Jumping Drake LeaderBoard</title>
     </head>
 
     <body>
@@ -9,7 +9,7 @@
         <table boarder =1>
             <tr>
                 <td>Ranking</td>
-                <td>UserName</td>
+                <td>Username</td>
                 <td>HighestScore</td>
             </tr>
             <?php
