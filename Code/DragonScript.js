@@ -30,7 +30,7 @@ let isAlive = setInterval(function () {
   if ((knight1Left < 65 && knight1Left > 0 && dragonTop >= 450) | (knight2left < 120 && knight2left > 0 && dragonTop >= 450)) {
 
     // collision
-    score = Math.floor(counter/100)
+    score = Math.floor(counter/30)
 
     if (!confirm("Press \"OK\" to play again, OR \"Cancel\" if you want to see the LeaderBoard.")) {
         window.open("leaderboard.php");
@@ -57,7 +57,7 @@ let isAlive = setInterval(function () {
 
   else{
     counter++;
-    score = document.getElementById("scoreSpan").innerHTML = Math.floor(counter/100);
+    score = document.getElementById("scoreSpan").innerHTML = Math.floor(counter/30);
   } 
 
 }, 10);
